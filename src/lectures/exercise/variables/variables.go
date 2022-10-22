@@ -25,4 +25,21 @@ package main
 import "fmt"
 
 func main() {
+	favouriteColor := "white"
+	fmt.Println("my favourite color is " + favouriteColor)
+	birthYear, age := 1991, 31
+	fmt.Println(fmt.Sprintf("I am %d years old, having been born in %d", age, birthYear))
+	var (
+		initialFirst = 'R'
+		initialLast  = 'B'
+	)
+	initials := fmt.Sprintf("%s.%s.", string(initialFirst), string(initialLast))
+	fmt.Println(fmt.Sprintf("My initials are %s", initials))
+	var ageInDays int
+	ageInDays = age * 365
+	fmt.Println(fmt.Sprintf("I am more than %d days old!", ageInDays))
+	maxAge := 35
+	maxDays := maxAge * 365
+	remainingDays := maxDays - ageInDays
+	fmt.Println(fmt.Sprintf("I have to make the most of my next %d days... because after I will be %d", remainingDays, maxAge))
 }
